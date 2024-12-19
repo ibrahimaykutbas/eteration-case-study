@@ -6,7 +6,7 @@ import {
 } from 'react-native'
 import React from 'react'
 
-import { getRH, getRW } from '../theme/Units'
+import { getRH } from '../theme/Units'
 import Colors from '../theme/Colors'
 import Fonts from '../theme/Fonts'
 
@@ -34,15 +34,15 @@ export default Button
 
 const styles = StyleSheet.create({
   container: {
-    height: getRH(60),
-    backgroundColor: Colors.WHITE,
+    height: getRH(45),
+    backgroundColor: Colors.BLUE,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: getRH(8)
   },
   title: {
     fontSize: Fonts.size(20),
-    color: Colors.BLACK,
+    color: Colors.WHITE,
     fontWeight: '600'
   },
   disabled: {
