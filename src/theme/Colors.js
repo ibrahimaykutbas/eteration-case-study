@@ -12,6 +12,7 @@ export default {
   PURPLE: '#BF5AF2',
   PINK: '#FF375F',
   BROWN: '#AC8E68',
+  LIGHTGRAY: '#E5E5EA',
   GRAY: '#636366',
   GRAY2: '#3A3A3C', // Border - Placeholder
   GRAY3: '#48484A',
