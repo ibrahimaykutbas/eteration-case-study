@@ -6,7 +6,7 @@ import Colors from '../theme/Colors'
 import Fonts from '../theme/Fonts'
 
 import BackIcon from '../assets/icons/back.svg'
-import AddIcon from '../assets/icons/add.svg'
+import TrashIcon from '../assets/icons/trash.svg'
 
 const TopMenu = ({
   leftTitle,
@@ -19,7 +19,9 @@ const TopMenu = ({
 }) => {
   const ICONS = {
     Back: <BackIcon width={getRH(27)} height={getRH(27)} />,
-    Add: <AddIcon width={getRH(40)} height={getRH(40)} color={Colors.BLACK} />
+    Trash: (
+      <TrashIcon width={getRH(30)} height={getRH(30)} color={Colors.BLACK} />
+    )
   }
 
   return (
