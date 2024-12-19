@@ -1,27 +1,28 @@
-import { SafeAreaView, Text, StyleSheet, ScrollView } from 'react-native'
+import { SafeAreaView, StyleSheet } from 'react-native'
 import React, { useEffect } from 'react'
 
-import { getRW, getRH } from '../theme/Units'
 import Colors from '../theme/Colors'
 
-import TopMenu from '../components/TopMenu'
 import CustomActivityIndicator from '../components/CustomActivityIndicator'
+import TopMenu from '../components/TopMenu'
 
 import useApi from '../hooks/useApi'
 import productsApi from '../services/products'
+
+import ProductList from '../components/ProductList'
 
 const Home = () => {
   const getProductsApi = useApi(productsApi.getProducts)
 
   useEffect(() => {
-    getProdutcs()
+    getProducts()
   }, [])
 
-  const getProdutcs = async () => {
+  const getProducts = async () => {
     try {
       await getProductsApi.request()
     } catch (error) {
-      console.log('fetchUsers -> error', error)
+      console.log('getProducts -> error', error)
     }
   }
 
@@ -30,11 +31,8 @@ const Home = () => {
   return (
     <SafeAreaView style={styles.container}>
       <TopMenu title="E-Market" />
-      <ScrollView>
-        <Text style={{ color: 'red' }}>
-          {JSON.stringify(getProductsApi.data, null, 2)}
-        </Text>
-      </ScrollView>
+
+      <ProductList products={getProductsApi?.data} />
     </SafeAreaView>
   )
 }
