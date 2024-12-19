@@ -10,6 +10,8 @@ import Basket from '../screens/Basket'
 import Favorites from '../screens/Favorites'
 import Profile from '../screens/Profile'
 
+import Badge from '../components/Badge'
+
 import HomeIcon from '../assets/icons/home.svg'
 import HomeFillIcon from '../assets/icons/home-fill.svg'
 import BasketIcon from '../assets/icons/basket.svg'
@@ -19,8 +21,14 @@ import FavoritesFillIcon from '../assets/icons/favorite-fill.svg'
 import ProfileIcon from '../assets/icons/profile.svg'
 import ProfileFillIcon from '../assets/icons/profile-fill.svg'
 
+import { useSelector } from 'react-redux'
+
 const TabNavigator = () => {
   const Tab = createBottomTabNavigator()
+
+  const basket = useSelector(state => state.slice.basket)
+
+  const basketCount = basket.reduce((acc, item) => acc + item.count, 0)
 
   return (
     <Tab.Navigator
@@ -46,7 +54,14 @@ const TabNavigator = () => {
             Icon = focused ? ProfileFillIcon : ProfileIcon
           }
 
-          return <Icon width={getRH(32)} height={getRH(32)} />
+          return (
+            <>
+              <Icon width={getRH(32)} height={getRH(32)} />
+              {route.name === routes.BASKET && basketCount > 0 && (
+                <Badge count={basketCount} />
+              )}
+            </>
+          )
         }
       })}>
       <Tab.Screen name={routes.HOME} component={Home} />
