@@ -1,10 +1,12 @@
 export default {
   SPLASH_SCREEN: 'SplashScreen',
 
-  APP_NAVIGATOR: 'AppNavigator',
+  TAB_NAVIGATOR: 'TabNavigator',
 
   HOME: 'Home',
   BASKET: 'Basket',
   FAVORITES: 'Favorites',
-  PROFILE: 'Profile'
+  PROFILE: 'Profile',
+
+  PRODUCT_DETAIL: 'ProductDetail'
 }

@@ -9,7 +9,7 @@ import routes from '../navigation/routes'
 const SplashScreen = ({ navigation }) => {
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace(routes.APP_NAVIGATOR)
+      navigation.replace(routes.TAB_NAVIGATOR)
     }, 1000)
   }, [])
 

@@ -19,7 +19,7 @@ import FavoritesFillIcon from '../assets/icons/favorite-fill.svg'
 import ProfileIcon from '../assets/icons/profile.svg'
 import ProfileFillIcon from '../assets/icons/profile-fill.svg'
 
-const AppNavigator = () => {
+const TabNavigator = () => {
   const Tab = createBottomTabNavigator()
 
   return (
@@ -57,4 +57,4 @@ const AppNavigator = () => {
   )
 }
 
-export default AppNavigator
+export default TabNavigator
