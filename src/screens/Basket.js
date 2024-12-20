@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   actionButton: {
     width: getRW(40),
     height: getRW(40),
-    backgroundColor: Colors.LIGHTGRAY,
+    backgroundColor: Colors.LIGHT_GRAY,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: getRW(5)
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
   },
   line: {
     height: getRH(1),
-    backgroundColor: Colors.LIGHTGRAY,
+    backgroundColor: Colors.LIGHT_GRAY,
     marginVertical: getRH(10),
     marginHorizontal: getRW(20)
   }
