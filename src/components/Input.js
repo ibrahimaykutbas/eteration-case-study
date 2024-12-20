@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   input: {
     width: '100%',
     height: '100%',
-    color: Colors.WHITE,
+    color: Colors.BLACK,
     paddingVertical: getRH(14),
     fontWeight: '500',
     fontSize: Fonts.size(18)

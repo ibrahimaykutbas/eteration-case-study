@@ -34,7 +34,7 @@ const Home = () => {
       <TopMenu title="E-Market" />
 
       <View style={styles.content}>
-        <ProductList products={getProductsApi?.data} />
+        <ProductList products={getProductsApi?.data} searchable />
       </View>
     </SafeAreaView>
   )
