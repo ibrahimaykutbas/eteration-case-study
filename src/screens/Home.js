@@ -1,7 +1,8 @@
-import { SafeAreaView, StyleSheet } from 'react-native'
+import { SafeAreaView, StyleSheet, View } from 'react-native'
 import React, { useEffect } from 'react'
 
 import Colors from '../theme/Colors'
+import { getRW } from '../theme/Units'
 
 import CustomActivityIndicator from '../components/CustomActivityIndicator'
 import TopMenu from '../components/TopMenu'
@@ -32,7 +33,9 @@ const Home = () => {
     <SafeAreaView style={styles.container}>
       <TopMenu title="E-Market" />
 
-      <ProductList products={getProductsApi?.data} />
+      <View style={styles.content}>
+        <ProductList products={getProductsApi?.data} />
+      </View>
     </SafeAreaView>
   )
 }
@@ -43,5 +46,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.WHITE
+  },
+  content: {
+    flex: 1,
+    paddingHorizontal: getRW(20)
   }
 })

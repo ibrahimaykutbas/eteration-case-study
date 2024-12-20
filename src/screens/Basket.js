@@ -112,7 +112,8 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.WHITE
   },
   content: {
-    flex: 1
+    flex: 1,
+    paddingHorizontal: getRW(20)
   },
   flatlistContainer: {
     marginTop: getRH(20)
@@ -121,7 +122,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginHorizontal: getRW(20),
     gap: getRW(20)
   },
   left: {

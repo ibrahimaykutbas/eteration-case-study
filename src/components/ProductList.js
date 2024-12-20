@@ -117,8 +117,7 @@ const styles = StyleSheet.create({
   },
   columnWrapperStyle: {
     justifyContent: 'space-between',
-    gap: getRW(20),
-    paddingHorizontal: getRW(20)
+    gap: getRW(20)
   },
   product: {
     flex: 1,

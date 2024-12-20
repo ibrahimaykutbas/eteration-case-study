@@ -9,6 +9,7 @@ import {
 import React from 'react'
 
 import Colors from '../theme/Colors'
+import { getRW } from '../theme/Units'
 
 import TopMenu from '../components/TopMenu'
 import ProductList from '../components/ProductList'
@@ -68,6 +69,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.WHITE
   },
   content: {
-    flex: 1
+    flex: 1,
+    paddingHorizontal: getRW(20)
   }
 })
