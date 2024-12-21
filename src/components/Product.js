@@ -33,14 +33,20 @@ const Product = ({ product }) => {
   return (
     <Pressable
       style={styles.product}
-      onPress={() => navigation.navigate(routes.PRODUCT_DETAIL, { product })}>
+      onPress={() => navigation.navigate(routes.PRODUCT_DETAIL, { product })}
+      testID="product">
       <View style={styles.content}>
         <View style={styles.imageContainer}>
-          <Image style={styles.image} source={{ uri: product.image }} />
+          <Image
+            style={styles.image}
+            source={{ uri: product.image }}
+            testID="product-image"
+          />
 
           <TouchableOpacity
             style={styles.icon}
-            onPress={() => dispatch(setFavorites(product))}>
+            onPress={() => dispatch(setFavorites(product))}
+            testID="favorite-button">
             {isFavorite ? (
               <FavoriteFillIcon
                 width={getRH(30)}

@@ -20,7 +20,8 @@ const Button = ({ title, onPress, propStyles, disabled, loading }) => {
         (disabled || loading) && styles.disabled
       ]}
       activeOpacity={0.8}
-      disabled={disabled || loading}>
+      disabled={disabled || loading}
+      testID="button">
       {loading ? (
         <ActivityIndicator size="small" color={Colors.BLACK} />
       ) : (

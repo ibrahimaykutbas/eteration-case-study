@@ -25,13 +25,14 @@ const TopMenu = ({
   }
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="topMenu">
       <View style={styles.buttonContainer}>
         {onPressLeft && (
           <TouchableOpacity
             onPress={onPressLeft}
             style={styles.button}
-            activeOpacity={0.8}>
+            activeOpacity={0.8}
+            testID="leftButton">
             {ICONS[leftIcon]}
             <Text style={styles.buttonTitle}>{leftTitle}</Text>
           </TouchableOpacity>
@@ -43,7 +44,8 @@ const TopMenu = ({
           <TouchableOpacity
             onPress={onPressRight}
             style={styles.button}
-            activeOpacity={0.8}>
+            activeOpacity={0.8}
+            testID="rightButton">
             {ICONS[rightIcon]}
             <Text style={styles.buttonTitle}>{rightTitle}</Text>
           </TouchableOpacity>

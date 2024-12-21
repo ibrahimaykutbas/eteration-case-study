@@ -13,7 +13,7 @@ const Input = ({
   propInputStyles
 }) => {
   return (
-    <View style={[styles.container, propContainerStyles]}>
+    <View style={[styles.container, propContainerStyles]} testID="input">
       <TextInput
         value={value}
         onChangeText={onChangeText}
